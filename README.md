@@ -1,5 +1,7 @@
 # News Blog API
 
+![News Blog API](https://images.unsplash.com/photo-1585282263861-f55e341878f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+
 This is a ready to consume back-end API for content management system (CMS) built using Laravel. It is a simple solution for building CMS API without getting distracted on its layout. Because, now, we can use separate architecture between back-end and front-end. Thus, you will find that the resources folder is empty. 
 
 ## Purpose
@@ -41,10 +43,10 @@ Navigate to the following steps to run this project.
 
 1.  Clone this project to your local
 2.  Run in terminal sequentially
-    `$ composer install` 
-    `$ php artisan key:generate`
-    `$ php artisan migrate`
-    `$ php artisan serve`
+    - `$ composer install` 
+    - `$ php artisan key:generate`
+    - `$ php artisan migrate`
+    - `$ php artisan serve`
 4.  Server is ready
 5.  List of the API can be found here `news-blog-api.postman_collection.json` 
 6.  Import the file to [Postman](https://www.postman.com/), download if you don't have it
