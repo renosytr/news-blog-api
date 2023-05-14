@@ -14,6 +14,7 @@ The main purpose of this API is to provide key services of CMS, such as news por
     - Forgot password procedure
     - Email verification
     - Recover deleted user account
+    - Add featured writter
 
 2.  Posting management, the feature are as follow:
     - CRUD article by writter type of user
@@ -22,6 +23,7 @@ The main purpose of this API is to provide key services of CMS, such as news por
     - Like and dislike a post
     - Like and dislike a comment
     - Autocomplete and suggestion for searching an article
+    - Add featured post
 
 3.  Follow management, the feature are as follow:
     - Follow and unfollow a writter by reader
