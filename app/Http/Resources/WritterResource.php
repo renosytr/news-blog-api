@@ -19,12 +19,14 @@ class WritterResource extends JsonResource
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
             'avatar' => $this->avatar,
+            'genre' => $this->genre,
             'summary' => $this->summary,
             'mobile' => $this->mobile,
             'facebook' => $this->facebook,
             'twitter' => $this->twitter,
             'instagram' => $this->instagram,
-            'linkedin' => $this->linkedin
+            'linkedin' => $this->linkedin,
+            'is_featured' => $this->is_featured
         ];
     }
 }

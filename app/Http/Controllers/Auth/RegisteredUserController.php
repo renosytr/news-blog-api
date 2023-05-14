@@ -18,7 +18,7 @@ class RegisteredUserController extends Controller
     public function store(RegisterRequest $request, UserService $userService)
     {
         
-        if($request->isWritter)
+        if($request->is_writter)
         {
             $writter = $userService->storeWritter($request->getUserData());
 
@@ -26,11 +26,12 @@ class RegisteredUserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'isAdmin' => $request->isAdmin,
+                'is_admin' => $request->is_admin,
                 'writter_id' => $writter->id,
+                'reader_id' => 0
             ]);
 
-        } else if($request->isReader) 
+        } else if($request->is_reader) 
         {
             $reader = $userService->storeReader($request->getUserData());
 
@@ -38,7 +39,8 @@ class RegisteredUserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'isAdmin' => $request->isAdmin,
+                'is_admin' => $request->is_admin,
+                'writter_id' => 0,
                 'reader_id' => $reader->id
             ]);
             

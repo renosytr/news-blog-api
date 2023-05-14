@@ -22,6 +22,7 @@ class post extends Model
         'summary',
         'slug',
         'cover',
+        'is_featured',
         'tags',
         'deleted_at'
     ];

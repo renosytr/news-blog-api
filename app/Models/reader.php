@@ -16,13 +16,14 @@ class reader extends Model
         'first_name',
         'last_name',
         'avatar',
+        'genre',
         'summary',
         'mobile',
         'facebook',
         'twitter',
         'instagram',
         'linkedin',
-        'isNewsletter'
+        'is_newsletter'
     ];
 
     protected $hidden = ['created_at', 'updated_at'];

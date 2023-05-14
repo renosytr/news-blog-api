@@ -12,6 +12,7 @@ Route::post('/auth/register', [RegisteredUserController::class, 'store']);
 Route::post('/auth/login', [AuthenticatedSessionController::class, 'store']);
 Route::post('/auth/forgot-password', [ResetPasswordController::class, 'forgot']);
 Route::post('/auth/reset-password', [ResetPasswordController::class, 'reset'])->name('password.reset');
+Route::post('/auth/recover/{email}', [DeleteUserController::class, 'recover']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/auth/email/verification/{id}', [EmailVerificationNotificationController::class, 'sendVerification']);

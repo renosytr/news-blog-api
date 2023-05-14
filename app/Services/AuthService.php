@@ -95,4 +95,10 @@ class AuthService
         return $user->update(['deleted_at' => Carbon::now()]);
     }
 
+    public function recoverUser($email)
+    {
+        $user = User::whereNotNull('deleted_at')->where('email', $email)->first();
+        return $user->update(['deleted_at' => null]);
+    }
+
 }

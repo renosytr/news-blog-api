@@ -24,4 +24,28 @@ class DeleteUserController extends Controller
             ], 404);
         }
     }
+
+    public function recover(string $email, AuthService $authService)
+    {
+        if(!$email){
+            return response()->json([
+                "status" => 422,
+                "message" => "Email user is required for account recovery"
+            ], 422);
+        }
+
+        $user = $authService->recoverUser($email);
+        if($user){
+            return response()->json([
+                "status" => 200,
+                "message" => "Successfully recovering a user"
+            ]);
+        } else {
+            return response()->json([
+                "status" => 404,
+                "message" => "User is not found"
+            ], 404);
+        }
+    }
+    
 }

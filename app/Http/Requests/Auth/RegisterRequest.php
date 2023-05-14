@@ -26,9 +26,9 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'isWritter' => ['required', 'boolean'],
-            'isReader' => ['required', 'boolean'],
-            'isAdmin' => ['required', 'boolean'],
+            'is_writter' => ['required', 'boolean'],
+            'is_reader' => ['required', 'boolean'],
+            'is_admin' => ['required', 'boolean'],
             'first_name' => ['required', 'max:255'],
             'last_name' => ['required', 'max:255'],
             'mobile'  => ['required', 'unique:writters', 'unique:readers', 'max:13'],
@@ -50,16 +50,16 @@ class RegisterRequest extends FormRequest
             'twitter' => $this->twitter,
             'instagram' => $this->intagram,
             'linkedin' => $this->linkedin,
-            'isNewsletter' => $this->isNewsletter,
+            'is_newsletter' => $this->is_newsletter,
         ];
     }
     
     public function messages(): array
     {
         return [
-            'isWritter.required' => 'Please determine whether the user is a writter',
-            'isReader.required' => 'Please determine whether the user is a reader',
-            'isAdmin.required' => 'Please determine whether the user is an admin',
+            'is_writter.required' => 'Please determine whether the user is a writter',
+            'is_reader.required' => 'Please determine whether the user is a reader',
+            'is_admin.required' => 'Please determine whether the user is an admin',
             'first_name.required' => 'First name is required',
             'last_name.required' => 'Last name is required',
             'mobile.required' => 'Mobile number is required',

@@ -10,6 +10,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LikePostController;
 use App\Http\Controllers\LikeCommentController;
 use App\Http\Controllers\FollowController;
+use App\Http\Controllers\FeaturedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,5 +48,12 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
         Route::get('/following/{id}', 'showFollowing');
         Route::post('/follow/{id}', 'store');
         Route::post('/unfollow/{id}', 'destroy');
+    });
+
+    Route::controller(FeaturedController::class)->group(function () {
+        Route::get('/featured/post', 'showFeaturedPost');
+        Route::post('/featured/post/{slug}', 'storeFeaturedPost');
+        Route::get('/featured/writter', 'showFeaturedWritter');
+        Route::post('/featured/writter/{id}', 'storeFeaturedWritter');
     });
 });

@@ -23,7 +23,7 @@ class CategoryService
     {
         $user = User::where('uuid', $data['admin_uuid'])->first();
         try {
-            if($user->isAdmin)
+            if($user->is_admin)
             {
                 $category = category::create($data);
                 return $category;
@@ -39,7 +39,7 @@ class CategoryService
     {
         $user = User::where('uuid', $data['admin_uuid'])->first();
         try {
-            if($user->isAdmin)
+            if($user->is_admin)
             {
                 $category = category::where('uuid', $id)->update(array(
                     'name' => $data['name'],
@@ -56,10 +56,10 @@ class CategoryService
 
     public function deleteCategory($id, $admin_id)
     {
-        $admin = User::where('uuid', $admin_id)->first(['isAdmin']);
+        $admin = User::where('uuid', $admin_id)->first(['is_admin']);
 
         try {
-            if($admin->isAdmin){
+            if($admin->is_admin){
                 $category = category::where('uuid', $id)->delete();
                 return $category;
             } else {

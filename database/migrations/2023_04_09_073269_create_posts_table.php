@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('summary');
             $table->text('slug');
             $table->string('cover')->nullable();
+            $table->boolean('is_featured')->default(0);
             $table->string('tags')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();

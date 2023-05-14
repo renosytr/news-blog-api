@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->boolean('isAdmin')->nullable();
+            $table->boolean('is_admin')->default(0);
             $table->foreignId('writter_id')->nullable();
             $table->foreignId('reader_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('last_login')->nullable();
-            $table->timestamp('deleted_at')->nullable();
+            $table->timestamp('deleted_at')->default(null)->nullable();
             $table->timestamps();
         });
     }

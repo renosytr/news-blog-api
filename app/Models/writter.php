@@ -16,12 +16,14 @@ class writter extends Model
         'first_name',
         'last_name',
         'avatar',
+        'genre',
         'summary',
         'mobile',
         'facebook',
         'twitter',
         'instagram',
         'linkedin',
+        'is_featured'
     ];
 
     protected $hidden = ['created_at', 'updated_at'];

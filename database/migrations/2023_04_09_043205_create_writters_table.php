@@ -17,12 +17,14 @@ return new class extends Migration
             $table->string('first_name', 255)->nullable();
             $table->string('last_name', 255)->nullable();
             $table->string('avatar', 255)->nullable();
+            $table->string('genre')->nullable();
             $table->text('summary')->nullable();
             $table->string('mobile', 13)->unique()->nullable();
             $table->string('facebook', 255)->nullable();
             $table->string('twitter', 255)->nullable();
             $table->string('instagram', 255)->nullable();
             $table->string('linkedin', 255)->nullable();
+            $table->boolean('is_featured')->default(0);
             $table->timestamps();
         });
     }

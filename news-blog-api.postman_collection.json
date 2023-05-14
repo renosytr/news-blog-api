@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"first_name\" : \"fahima\",\r\n        \"last_name\" : \"haha\",\r\n        \"mobile\" : \"0812345144\",\r\n        \"name\" : \"fahima haha\",\r\n        \"email\" : \"fahima@gmail.com\",\r\n        \"password\" : \"12345678\",\r\n        \"password_confirmation\" : \"12345678\",\r\n        \"isAdmin\": 0,\r\n        \"isWritter\": 0,\r\n        \"isReader\": 1,\r\n        \"isNewsletter\": 0\r\n}",
+							"raw": "{\r\n        \"first_name\" : \"super\",\r\n        \"last_name\" : \"admin\",\r\n        \"mobile\" : \"0812345111\",\r\n        \"name\" : \"super admin\",\r\n        \"email\" : \"super-admin@gmail.com\",\r\n        \"password\" : \"12345678\",\r\n        \"password_confirmation\" : \"12345678\",\r\n        \"is_admin\": 1,\r\n        \"is_writter\": 1,\r\n        \"is_reader\": 0,\r\n        \"is_newsletter\": 0\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -39,46 +39,6 @@
 					"response": []
 				},
 				{
-					"name": "Logout a user",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "6|OVxxtyqoMBp2L6iYdutounuRrq3r1xL8VMn2awXV",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8000/auth/logout/35c5eb21-171a-461e-b064-ee240126bc47",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8000",
-							"path": [
-								"auth",
-								"logout",
-								"35c5eb21-171a-461e-b064-ee240126bc47"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Login a user",
 					"request": {
 						"auth": {
@@ -88,7 +48,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"fahima@gmail.com\",\r\n    \"password\" : \"12345678\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"super-admin@gmail.com\",\r\n    \"password\" : \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -111,13 +71,53 @@
 					"response": []
 				},
 				{
+					"name": "Logout a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|38ZKlJ6pyPtriAHhcbneqpvtXkFhblKq8TnGxV0i",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/auth/logout/dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"logout",
+								"dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Forgot password",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"gaga@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"lala-eses@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -146,7 +146,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"token\": \"07b8d2467635678df6f5e4059ae58cb7715d9144a96f756ea367f4980bfbffdc\",\r\n    \"email\": \"gaga@gmail.com\",\r\n    \"password\": \"qwerty123\",\r\n    \"password_confirmation\": \"qwerty123\"\r\n}",
+							"raw": "{\r\n    \"token\": \"1e38a8200a36344a7c385eed130e290a95357954ab7f2adc02747ce095ccc115\",\r\n    \"email\": \"lala-eses@gmail.com\",\r\n    \"password\": \"qwerty123\",\r\n    \"password_confirmation\": \"qwerty123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -176,7 +176,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "10|jzuBnU6H7WK2sNNqWWZBaxh9BiahJ3gYoXD5ls7H",
+									"value": "7|38ZKlJ6pyPtriAHhcbneqpvtXkFhblKq8TnGxV0i",
 									"type": "string"
 								}
 							]
@@ -193,7 +193,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/auth/email/verification/31fc031e-8865-4aa0-bca2-afec8a3daf59",
+							"raw": "http://localhost:8000/auth/email/verification/dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -203,7 +203,7 @@
 								"auth",
 								"email",
 								"verification",
-								"31fc031e-8865-4aa0-bca2-afec8a3daf59"
+								"dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750"
 							]
 						}
 					},
@@ -217,7 +217,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "10|jzuBnU6H7WK2sNNqWWZBaxh9BiahJ3gYoXD5ls7H",
+									"value": "7|38ZKlJ6pyPtriAHhcbneqpvtXkFhblKq8TnGxV0i",
 									"type": "string"
 								}
 							]
@@ -225,7 +225,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/auth/email/verify-email/7/f683092aa47211301a71726402a2e1cbc9e5d8be?expires=1683601229&signature=264bfb083d62fc4a289319f06dbfb9deef9c3b256a3b658bc729cb70b24220f3",
+							"raw": "http://localhost:8000/auth/email/verify-email/2/d5bfd9664614546e1abf538b49208a198daac871?expires=1684042013&signature=dfdef97789c0e47044ce64274f577cc02fe21392c64264b6c4e83b091ae1d3ee",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -235,17 +235,17 @@
 								"auth",
 								"email",
 								"verify-email",
-								"7",
-								"f683092aa47211301a71726402a2e1cbc9e5d8be"
+								"2",
+								"d5bfd9664614546e1abf538b49208a198daac871"
 							],
 							"query": [
 								{
 									"key": "expires",
-									"value": "1683601229"
+									"value": "1684042013"
 								},
 								{
 									"key": "signature",
-									"value": "264bfb083d62fc4a289319f06dbfb9deef9c3b256a3b658bc729cb70b24220f3"
+									"value": "dfdef97789c0e47044ce64274f577cc02fe21392c64264b6c4e83b091ae1d3ee"
 								}
 							]
 						}
@@ -260,7 +260,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "5|8W8Z1ybJn80FPVka30cjY5wDZSZBrzbG7vmY1VmX",
+									"value": "5|SAgDDq1xpQFpUQdqwTvapYzv03h2IrvKTDoQsgOF",
 									"type": "string"
 								}
 							]
@@ -268,7 +268,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/auth/delete/35c5eb21-171a-461e-b064-ee240126bc47",
+							"raw": "http://localhost:8000/auth/delete/f7ace228-299c-4381-88d7-55b067221d97",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -277,7 +277,28 @@
 							"path": [
 								"auth",
 								"delete",
-								"35c5eb21-171a-461e-b064-ee240126bc47"
+								"f7ace228-299c-4381-88d7-55b067221d97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recover a user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/auth/recover/lala-hehe@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"auth",
+								"recover",
+								"lala-hehe@gmail.com"
 							]
 						}
 					},
@@ -299,7 +320,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "11|iqQgLwXpqbJ6qUlUzATIwBFTfVjf5PLVlY8tzjv9",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -333,7 +354,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|ndn6c8DQov1bq0jDW6nVQFfcfBj2X9e2pxyXoQig",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -341,7 +362,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/api/writter/35c5eb21-171a-461e-b064-ee240126bc47",
+							"raw": "http://localhost:8000/api/writter/dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -350,7 +371,7 @@
 							"path": [
 								"api",
 								"writter",
-								"35c5eb21-171a-461e-b064-ee240126bc47"
+								"dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750"
 							]
 						}
 					},
@@ -590,7 +611,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|ndn6c8DQov1bq0jDW6nVQFfcfBj2X9e2pxyXoQig",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -599,7 +620,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"category_id\" : \"c0b7b7c3-1a13-4b1a-bcaf-7eee7cd08897\",\r\n    \"writter_id\" :  \"705f35a4-de61-4508-aa6e-f12760a16119\",\r\n    \"title\" : \"late night\",\r\n    \"post_content\" : \"late night watching movie\",\r\n    \"summary\" : \"late night watching movie\",\r\n    \"cover\" : \"http://localhost:8000/api/category/movie\",\r\n    \"tags\" : \"movie\"\r\n}",
+							"raw": "{\r\n    \"category_id\" : \"680d3dd5-4810-484b-87a9-f8f3cedc9c5e\",\r\n    \"writter_id\" :  \"30cbd38a-670b-43a4-93d0-285a62adb999\",\r\n    \"title\" : \"technology liberal\",\r\n    \"post_content\" : \"technology is not part of old civilization in Germany\",\r\n    \"summary\" : \"technology babylon liberal\",\r\n    \"cover\" : \"http://localhost:8000/api/category/babylon-technology\",\r\n    \"tags\" : \"babylon, technology, validation\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -629,7 +650,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "10|jzuBnU6H7WK2sNNqWWZBaxh9BiahJ3gYoXD5ls7H",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -637,7 +658,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/api/post",
+							"raw": "http://localhost:8000/api/post/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -645,7 +666,8 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"post"
+								"post",
+								""
 							]
 						}
 					},
@@ -799,7 +821,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|D9GMQajkR2CeIZE6SyOPmG4V1kYt5MRnX4qquVpH",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -808,7 +830,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"admin_uuid\" : \"35c5eb21-171a-461e-b064-ee240126bc47\",\r\n    \"name\" : \"economy\",\r\n    \"icon\" : \"http://localhost:8000/api/category/economy\"\r\n}",
+							"raw": "{\r\n    \"admin_uuid\" : \"dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750\",\r\n    \"name\" : \"technology\",\r\n    \"icon\" : \"http://localhost:8000/api/category/technology\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -838,7 +860,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|D9GMQajkR2CeIZE6SyOPmG4V1kYt5MRnX4qquVpH",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -868,7 +890,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "3|D9GMQajkR2CeIZE6SyOPmG4V1kYt5MRnX4qquVpH",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
 									"type": "string"
 								}
 							]
@@ -876,7 +898,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8000/api/category/1c4e99a3-22a2-45ab-b8c2-8cf4dfe5e58e",
+							"raw": "http://localhost:8000/api/category/e03fa4d2-885e-4465-a4fc-dbd179e567f2",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -885,7 +907,7 @@
 							"path": [
 								"api",
 								"category",
-								"1c4e99a3-22a2-45ab-b8c2-8cf4dfe5e58e"
+								"e03fa4d2-885e-4465-a4fc-dbd179e567f2"
 							]
 						}
 					},
@@ -1506,6 +1528,136 @@
 								"api",
 								"unfollow",
 								"6f90112b-77b0-4bc7-bf69-437c020816dc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "featured",
+			"item": [
+				{
+					"name": "Create a post featured",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/featured/post/economy-liberal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"featured",
+								"post",
+								"economy-liberal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all post featured",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/featured/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"featured",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a user featured",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|Zfmrk0sDgb2uy3yHf6hbTeqNQBGuMXmIJgA0Sgy3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"admin_id\" : \"dc6e9ef1-e9fb-4088-9ac1-dfbee7ce9750\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/featured/writter/820c5139-4f34-4602-8c04-b011479ac507",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"featured",
+								"writter",
+								"820c5139-4f34-4602-8c04-b011479ac507"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all writter featured",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/featured/writter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"featured",
+								"writter"
 							]
 						}
 					},
